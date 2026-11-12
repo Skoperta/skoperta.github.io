@@ -1,0 +1,189 @@
+/* Skoperta website styles
+   1. Tokens: colours, type, spacing. Change the look here, not in page markup.
+   2. Base: resets and typography.
+   3. Components: header, sections, grids, footer.
+   Every page links this one file. Add new components at the end. */
+
+/* 1. Tokens */
+:root {
+  --paper: #fbfaf7;
+  --ink: #171f26;
+  --muted: #5d6771;
+  --line: #e4e1d9;
+  --accent: #0e5a66;
+  --on-accent: #ffffff;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --page-width: 68rem;
+  --measure: 62ch;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-gap: clamp(3rem, 8vw, 5.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #10161b;
+    --ink: #e8e5de;
+    --muted: #a3abb3;
+    --line: #28323b;
+    --accent: #74c4c8;
+    --on-accent: #10161b;
+  }
+}
+
+/* 2. Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+svg, img { display: block; max-width: 100%; }
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
+}
+a:hover { text-decoration-color: currentColor; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.6em;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2rem, 1.2rem + 3.2vw, 3.25rem); }
+h2 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.75rem); }
+h3 { font-size: 1.15rem; }
+
+p, li, dd { max-width: var(--measure); }
+p { margin: 0 0 1em; }
+ul { padding-left: 1.2rem; }
+address { font-style: normal; }
+
+/* 3. Components */
+.wrap {
+  width: min(100% - 2 * var(--gutter), var(--page-width));
+  margin-inline: auto;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; }
+
+.site-header { border-bottom: 1px solid var(--line); }
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-block: 1.1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.brand .mark { width: 1.5rem; height: 1.5rem; }
+
+.site-nav { display: flex; gap: clamp(1rem, 3vw, 1.75rem); font-size: 0.95rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
+
+.hero { padding-block: var(--section-gap); }
+
+.lead {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.35rem);
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 1.25rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section {
+  padding-block: var(--section-gap);
+  border-top: 1px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.grid h3 {
+  padding-top: 0.75rem;
+  border-top: 2px solid var(--ink);
+}
+.grid p { margin-bottom: 0; }
+
+.principles {
+  display: grid;
+  gap: 1.5rem 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 0;
+}
+.principles dt { font-weight: 600; }
+.principles dd { margin: 0.25rem 0 0; color: var(--muted); }
+
+.contact-line {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  font-weight: 600;
+}
+.contact-line a { text-decoration-thickness: 2px; }
+
+.note { color: var(--muted); font-size: 0.95rem; }
+
+.prose { padding-block: var(--section-gap); }
+.prose h2 { margin-top: 2.5rem; }
+.prose h2:first-of-type { margin-top: 0; }
+
+.site-footer {
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.site-footer p { max-width: none; }
+.site-footer p:last-child { margin-bottom: 0; }
+
+@media print {
+  .site-nav, .skip { display: none; }
+  body { font-size: 11pt; }
+}
