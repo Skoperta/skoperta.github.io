@@ -76,7 +76,8 @@ h3 { font-size: 1.15rem; }
 
 p, li, dd { max-width: var(--measure); }
 p { margin: 0 0 1em; }
-ul { padding-left: 1.2rem; }
+ul, ol { padding-inline-start: 1.2rem; }
+li { margin-block: 0.35em; }
 address { font-style: normal; }
 
 /* 3. Components */
@@ -221,7 +222,7 @@ address { font-style: normal; }
 
 .prose { padding-block: var(--section-gap); }
 .prose h2 { margin-top: 2.5rem; }
-.prose h2:first-of-type { margin-top: 0; }
+.prose h2:first-child { margin-top: 0; }
 
 .site-footer {
   padding-block: 2.5rem;
@@ -231,6 +232,23 @@ address { font-style: normal; }
 }
 .site-footer p { max-width: none; }
 .site-footer p:last-child { margin-bottom: 0; }
+
+/* App pages: breadcrumb, app list, bilingual (English + Persian) sections */
+.crumbs { margin: 0 0 2rem; font-size: 0.9rem; color: var(--muted); }
+.crumbs a { color: inherit; text-decoration: none; }
+.crumbs a:hover { color: var(--ink); text-decoration: underline; }
+
+.app-links { margin-top: 0.75rem; font-weight: 600; }
+
+.translation {
+  margin-top: var(--section-gap);
+  padding-top: var(--section-gap);
+  border-top: 1px solid var(--line);
+}
+
+:lang(fa) { font-family: "Vazirmatn", Tahoma, var(--font-sans); }
+/* Letter-spacing breaks joined Persian letters */
+:lang(fa) h1, :lang(fa) h2, :lang(fa) h3, :lang(fa) .eyebrow { letter-spacing: normal; }
 
 @media print {
   .site-nav, .skip { display: none; }
