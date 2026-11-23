@@ -4,6 +4,16 @@
    3. Components: header, sections, grids, footer.
    Every page links this one file. Add new components at the end. */
 
+/* 0. Fonts (self-hosted, no third-party requests) */
+/* Vazirmatn (formerly Vazir) for Persian, variable weight 100-900. SIL OFL, see /assets/fonts/vazirmatn-OFL.txt */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("/assets/fonts/vazirmatn.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
 /* 1. Tokens */
 :root {
   --paper: #fbfaf7;
@@ -13,6 +23,7 @@
   --accent: #2e6b4e;
   --on-accent: #ffffff;
 
+  --font-fa: "Vazirmatn", var(--font-sans);
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   --page-width: 68rem;
@@ -246,7 +257,7 @@ address { font-style: normal; }
   border-top: 1px solid var(--line);
 }
 
-:lang(fa) { font-family: "Vazirmatn", Tahoma, var(--font-sans); }
+:lang(fa) { font-family: var(--font-fa); }
 /* Letter-spacing breaks joined Persian letters */
 :lang(fa) h1, :lang(fa) h2, :lang(fa) h3, :lang(fa) .eyebrow { letter-spacing: normal; }
 
