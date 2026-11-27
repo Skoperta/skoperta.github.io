@@ -129,7 +129,7 @@ address { font-style: normal; }
 }
 .brand .mark { width: 1.5rem; height: 1.5rem; }
 
-.site-nav { display: flex; gap: clamp(1rem, 3vw, 1.75rem); font-size: 0.95rem; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 0.25rem clamp(1rem, 3vw, 1.75rem); font-size: 0.95rem; }
 .site-nav a { color: var(--muted); text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
 
