@@ -133,6 +133,29 @@ address { font-style: normal; }
 .site-nav a { color: var(--muted); text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--ink); }
 
+/* Apps dropdown: opens on hover or keyboard focus; the Apps link itself still goes to /apps/ */
+.nav-menu { position: relative; }
+.nav-menu > a::after { content: " \25BE"; font-size: 0.8em; }
+.nav-sub {
+  position: absolute;
+  top: 100%;
+  left: -0.75rem;
+  z-index: 10;
+  min-width: 12rem;
+  margin: 0;
+  padding: 0.4rem 0;
+  list-style: none;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.08);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.12s, visibility 0.12s;
+}
+.nav-sub a { display: block; padding: 0.35rem 0.75rem; }
+.nav-menu:hover .nav-sub, .nav-menu:focus-within .nav-sub { visibility: visible; opacity: 1; }
+
 .hero { padding-block: var(--section-gap); }
 
 .lead {
