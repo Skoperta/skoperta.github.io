@@ -261,6 +261,21 @@ address { font-style: normal; }
 /* Letter-spacing breaks joined Persian letters */
 :lang(fa) h1, :lang(fa) h2, :lang(fa) h3, :lang(fa) .eyebrow { letter-spacing: normal; }
 
+/* Tables in app pages */
+.prose h3 { margin-top: 1.75rem; }
+.table {
+  border-collapse: collapse;
+  margin: 0 0 1.25rem;
+  font-variant-numeric: tabular-nums;
+}
+.table caption { text-align: start; font-size: 0.9rem; color: var(--muted); padding-bottom: 0.4rem; }
+.table th, .table td {
+  padding: 0.45rem 1.5rem 0.45rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: start;
+}
+.table th { font-weight: 600; }
+
 @media print {
   .site-nav, .skip { display: none; }
   body { font-size: 11pt; }

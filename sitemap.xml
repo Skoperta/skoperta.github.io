@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://skoperta.com/apps/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://skoperta.com/apps/binosha-keyboard/support/</loc>
@@ -19,5 +19,13 @@
   <url>
     <loc>https://skoperta.com/apps/binosha-keyboard/privacy/</loc>
     <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://skoperta.com/apps/mizzle/support/</loc>
+    <lastmod>2026-11-27</lastmod>
+  </url>
+  <url>
+    <loc>https://skoperta.com/apps/mizzle/privacy/</loc>
+    <lastmod>2026-11-27</lastmod>
   </url>
 </urlset>
