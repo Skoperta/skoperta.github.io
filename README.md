@@ -8,6 +8,8 @@ Company website for Skoperta Ltd, served by GitHub Pages from the root of the `m
 |---|---|
 | `index.html` | Landing page: what we do, how we work, contact |
 | `privacy/index.html` | Privacy notice (website, email, products) |
+| `apps/index.html` | List of our apps, linking each app's support and privacy pages |
+| `apps/<slug>/support/index.html`, `apps/<slug>/privacy/index.html` | Support page and privacy policy for each app |
 | `404.html` | Not-found page (GitHub Pages serves it automatically) |
 | `assets/css/style.css` | Design tokens (colours, type, spacing) and layout, shared by every page |
 | `assets/favicon.svg`, `assets/favicon.png`, `assets/apple-touch-icon.png` | Site icons |
@@ -17,16 +19,16 @@ Company website for Skoperta Ltd, served by GitHub Pages from the root of the `m
 
 ## Conventions
 
-- One folder per page with an `index.html` inside, so URLs stay clean (`/privacy/`, `/products/<name>/`).
+- One folder per page with an `index.html` inside, so URLs stay clean (`/privacy/`, `/apps/<slug>/support/`).
 - Every page links `/assets/css/style.css` and reuses the header and footer markup from `index.html`. Mark the current page's nav link with `aria-current="page"`.
 - Change colours, type and spacing through the custom properties at the top of `style.css`, not in page markup.
 - Keep the legal footer (registered name, company number, registered office) on every page.
 - Absolute URLs appear only in the `<head>` of each page (canonical, Open Graph, JSON-LD), in `sitemap.xml` and in `robots.txt`. Change them together if the domain ever changes.
 - When the privacy notice changes, update its "Last updated" date and the `lastmod` in `sitemap.xml`.
 
-## Adding a product
+## Adding an app
 
-Create `products/<slug>/index.html` with `products/<slug>/privacy/index.html` and `products/<slug>/support/index.html` alongside it, copying the header and footer from `index.html`, then add the new URLs to `sitemap.xml`. App store forms then point at stable URLs: `https://skoperta.com/products/<slug>/privacy/` for the privacy policy and `https://skoperta.com/products/<slug>/support/` for support.
+Create `apps/<slug>/support/index.html` and `apps/<slug>/privacy/index.html`, copying the header, footer and breadcrumb from an existing app (such as `apps/binosha-keyboard/`). Add an `<article>` for it to `apps/index.html`, and add both URLs to `sitemap.xml`. App store forms then point at stable URLs: `https://skoperta.com/apps/<slug>/privacy/` for the privacy policy and `https://skoperta.com/apps/<slug>/support/` for support.
 
 ## Domain
 

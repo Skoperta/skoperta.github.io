@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mizzle Support · Skoperta</title>
+  <meta name="description" content="Help and contact for the Mizzle iOS app by Skoperta Ltd.">
+  <link rel="canonical" href="https://skoperta.com/apps/mizzle/support/">
+  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10161b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/" aria-label="Skoperta home">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="var(--accent)"/>
+          <path d="M38.89 17.21 A9 9 0 1 0 32 32 A9 9 0 1 1 25.11 46.79" fill="none" stroke="var(--on-accent)" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <span>Skoperta</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/#work">What we do</a>
+        <a href="/#approach">How we work</a>
+        <a href="/#contact">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap prose">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Skoperta</a> › <a href="/apps/">Apps</a> › Mizzle</nav>
+
+    <p class="eyebrow">Mizzle</p>
+    <h1>Support</h1>
+    <p class="lead">Mizzle shows how clean Great Britain's electricity is today in your part of the country, with Dewey the water droplet. It also invites you to call whether tomorrow's figure will come in over or under the forecast.</p>
+    <p class="cta-row">
+      <a class="button" href="mailto:dev@skoperta.com?subject=Mizzle">Email support</a>
+      <a class="button secondary" href="#how-mizzle-works">How Mizzle works</a>
+    </p>
+
+    <h2 id="how-mizzle-works">How Mizzle works</h2>
+
+    <h3>The figures</h3>
+    <ul>
+      <li><strong>Source:</strong> every figure comes from the <strong>Carbon Intensity API</strong> run by NESO, Great Britain's National Energy System Operator, in half-hour steps. Carbon intensity is how much carbon dioxide is released to make each unit of electricity, in grams of CO₂ per kilowatt-hour (g/kWh). Lower is cleaner.</li>
+      <li><strong>Regional figures are estimates.</strong> They come from NESO's model for 14 areas, not from meters. Mizzle calls them "estimates", and "final estimates" once the day is settled.</li>
+      <li><strong>Mizzle's own server</strong> collects the figures every 30 minutes by day and hourly overnight. Your phone only ever talks to Mizzle's server.</li>
+    </ul>
+
+    <h3>How a day is rated</h3>
+    <ul>
+      <li><strong>The day's figure</strong> is the average of its half-hours: usually 48, but 46 or 50 on the days the clocks change.</li>
+      <li><strong>Its score</strong> is the share of the <strong>past 365 days in your region</strong> that were dirtier. A day exactly as clean counts as half.</li>
+    </ul>
+    <table class="table">
+      <caption>Score tiers</caption>
+      <thead><tr><th scope="col">Score</th><th scope="col">Tier</th></tr></thead>
+      <tbody>
+        <tr><td>97 and above</td><td><strong>Legendary</strong></td></tr>
+        <tr><td>85 and above</td><td><strong>Rare</strong></td></tr>
+        <tr><td>60 and above</td><td><strong>Good</strong></td></tr>
+        <tr><td>25 and above</td><td><strong>Usual</strong></td></tr>
+        <tr><td>Below 25</td><td><strong>Heavy</strong></td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>When a day is settled:</strong> today is "on course" until <strong>12:00 tomorrow</strong>. At that point it becomes a final estimate and never changes again.</li>
+      <li><strong>Missing data:</strong> a day with fewer than 90% of its half-hours isn't rated.</li>
+      <li><strong>The comparison is local:</strong> each region is compared with its own past, so a "Good" day in Scotland and a "Good" day in London can have very different figures.</li>
+      <li><strong>Seasons show through:</strong> winter days often rate lower and summer days higher.</li>
+    </ul>
+
+    <h3>The evening call</h3>
+    <ul>
+      <li><strong>The line</strong> is the average of NESO's national forecast for the whole of tomorrow.</li>
+      <li><strong>Calls are open from 12:00 to 21:00.</strong> Tap Over or Under in the app or on a widget. Your call keeps the line you saw, even if the forecast changes later, and each day can be called once.</li>
+      <li><strong>The result</strong> is the average of NESO's national actual figures for that day, settled at <strong>12:00 the following day</strong>. During the day, Mizzle shows how it's going so far.</li>
+      <li><strong>Ties and missing data:</strong> if the result and the line are equal in whole grams, it's a tie. If national data is missing, the day doesn't count. Neither breaks a streak.</li>
+      <li><strong>Streaks:</strong> your play streak counts days in a row with a call, and your win streak counts days in a row with a winning call. Missing a day starts both again.</li>
+    </ul>
+
+    <h3>The album</h3>
+    <p>A <strong>Rare</strong> or <strong>Legendary</strong> day in your region becomes an album card if you opened Mizzle that day. The card appears once the day is settled, at noon the next day.</p>
+
+    <h3>What Mizzle can't tell you</h3>
+    <ul>
+      <li><strong>Averages, not the effect of switching something on:</strong> these are averages for the electricity being made. They don't show the extra emissions from switching something on right now (the "marginal" figure), which can be quite different.</li>
+      <li><strong>Small differences between regions</strong> are within the model's uncertainty, so treat them lightly.</li>
+      <li><strong>No savings claims:</strong> Mizzle makes no claims that using it saves you money or carbon. It's here to make the grid a little more visible, and a little more fun.</li>
+    </ul>
+
+    <h2>Common questions</h2>
+    <dl class="principles">
+      <div>
+        <dt>Why does Mizzle ask for my postcode?</dt>
+        <dd>Only to find your region. Type the first half (such as SW1A) or a full postcode. It's matched on your phone and never stored or sent. You can choose from a list instead.</dd>
+      </div>
+      <div>
+        <dt>My postcode area offers two regions.</dt>
+        <dd>Some postcode areas sit on the edge of two electricity regions. Pick the one your electricity comes through, or whichever looks closest. You can change it any time in Settings.</dd>
+      </div>
+      <div>
+        <dt>Mizzle says my postcode isn't on the grid.</dt>
+        <dd>Mizzle covers Great Britain's grid, which doesn't include Northern Ireland, the Channel Islands or the Isle of Man.</dd>
+      </div>
+      <div>
+        <dt>It says "not live" or "From yesterday …".</dt>
+        <dd>You're offline, or the figures haven't refreshed yet. Mizzle always shows how old its figures are and never shows old figures as live. Pull down to refresh.</dd>
+      </div>
+      <div>
+        <dt>There's no line yet for tomorrow.</dt>
+        <dd>The line needs NESO's forecast to cover all of tomorrow. Until it does, Mizzle says it's waiting. Check back a little later.</dd>
+      </div>
+      <div>
+        <dt>How do I call from a widget?</dt>
+        <dd>Add the Mizzle widget to your Home Screen in the medium size or larger, then tap <strong>Over</strong> or <strong>Under</strong> while calls are open.</dd>
+      </div>
+      <div>
+        <dt>How much data does Mizzle use?</dt>
+        <dd>Very little: usually one small update each time you open it. You can see today's figure under Settings › Data used today.</dd>
+      </div>
+      <div>
+        <dt>Does Mizzle track me or show ads?</dt>
+        <dd>No. See the <a href="/apps/mizzle/privacy/">Mizzle privacy policy</a>.</dd>
+      </div>
+    </dl>
+
+    <h2>Data and credits</h2>
+    <ul>
+      <li><strong>Carbon intensity:</strong> NESO Carbon Intensity API (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>). Mizzle is not affiliated with or endorsed by NESO.</li>
+      <li><strong>Region boundaries:</strong> supported by National Energy SO Open Data.</li>
+      <li><strong>Postcodes:</strong> contains OS data © Crown copyright and database right 2026, and Royal Mail data © Royal Mail copyright and database right 2026. Source: Office for National Statistics, licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v.3.0</a>.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email <a href="mailto:dev@skoperta.com?subject=Mizzle">dev@skoperta.com</a>. Please include your iPhone model and iOS version. We usually reply within a few working days.</p>
+    <p>See also the <a href="/apps/mizzle/privacy/">Mizzle privacy policy</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Skoperta Ltd is registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/17570656">17570656</a>. Registered office: 71-75 Shelton Street, Covent Garden, London WC2H 9JQ.</p>
+      <p>© 2026 Skoperta Ltd · <a href="/privacy/">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
