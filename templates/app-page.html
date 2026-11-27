@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+  App page template. Copy this file to apps/<slug>/index.html, then:
+  - Replace every APP_NAME, APP_SLUG, APP_ID and the placeholder text.
+  - Put a square icon at apps/<slug>/images/icon.svg (or .png) and screenshots at apps/<slug>/images/*.webp
+    (about 600 px wide: `cwebp -q 78 -resize 600 0 in.png -o out.webp`).
+  - Remove the noindex line below, and keep one .feature block per screenshot.
+  - Add the page to apps/index.html and sitemap.xml, and point the support/privacy breadcrumbs at /apps/<slug>/.
+  Live example: apps/mizzle/index.html
+-->
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>APP_NAME · Skoperta</title>
+  <meta name="description" content="One sentence on what APP_NAME does and who it is for.">
+  <link rel="canonical" href="https://skoperta.com/apps/APP_SLUG/">
+  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10161b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- <meta name="apple-itunes-app" content="app-id=APP_ID"> -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Skoperta">
+  <meta property="og:title" content="APP_NAME">
+  <meta property="og:description" content="One sentence on what APP_NAME does.">
+  <meta property="og:url" content="https://skoperta.com/apps/APP_SLUG/">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/" aria-label="Skoperta home">
+        <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="var(--accent)"/>
+          <path d="M38.89 17.21 A9 9 0 1 0 32 32 A9 9 0 1 1 25.11 46.79" fill="none" stroke="var(--on-accent)" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+        <span>Skoperta</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/#work">What we do</a>
+        <a href="/#approach">How we work</a>
+        <a href="/#contact">Contact</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="wrap app-hero">
+      <div>
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Skoperta</a> › <a href="/apps/">Apps</a> › APP_NAME</nav>
+        <img class="app-icon" src="/apps/APP_SLUG/images/icon.svg" alt="" width="88" height="88">
+        <p class="eyebrow">APP_NAME · iPhone</p>
+        <h1>The app's promise, in one line.</h1>
+        <p class="lead">Two or three sentences on what the app does and why someone would want it.</p>
+        <p class="cta-row">
+          <!-- APP STORE: replace href="#" with the App Store link -->
+          <a class="button store-button" href="#">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download on the App Store
+          </a>
+          <a class="button secondary" href="#features">See what it does</a>
+        </p>
+        <p class="note">Price, devices and minimum OS version.</p>
+      </div>
+      <figure class="shot">
+        <img src="/apps/APP_SLUG/images/main.webp" alt="Describe what the screenshot shows." width="600" height="1304">
+      </figure>
+    </section>
+
+    <section id="features" class="wrap section">
+      <h2 class="eyebrow">What's inside</h2>
+
+      <!-- One .feature per screenshot; the layout alternates sides automatically -->
+      <div class="feature">
+        <figure class="shot">
+          <img src="/apps/APP_SLUG/images/feature-1.webp" alt="Describe what the screenshot shows." width="600" height="1304" loading="lazy">
+        </figure>
+        <div>
+          <h3>Feature name</h3>
+          <p>What it does, in a sentence or two.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2 class="eyebrow">And also</h2>
+      <div class="grid">
+        <article>
+          <h3>Smaller feature</h3>
+          <p>One or two sentences.</p>
+        </article>
+        <article>
+          <h3>Private by design</h3>
+          <p>What the app does and doesn't collect. Read the <a href="/apps/APP_SLUG/privacy/">privacy policy</a>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section">
+      <h2 class="eyebrow">Get APP_NAME</h2>
+      <p class="cta-row">
+        <a class="button store-button" href="#">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Download on the App Store
+        </a>
+        <a class="button secondary" href="/apps/APP_SLUG/support/">Support</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Skoperta Ltd is registered in England and Wales, company number <a href="https://find-and-update.company-information.service.gov.uk/company/17570656">17570656</a>. Registered office: 71-75 Shelton Street, Covent Garden, London WC2H 9JQ.</p>
+      <p>© 2026 Skoperta Ltd · <a href="/privacy/">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

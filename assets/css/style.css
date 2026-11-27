@@ -280,3 +280,48 @@ address { font-style: normal; }
   .site-nav, .skip { display: none; }
   body { font-size: 11pt; }
 }
+
+/* App product pages (/apps/<slug>/): hero with icon and screenshot, feature rows */
+.app-hero {
+  display: grid;
+  gap: 2.5rem clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  padding-block: var(--section-gap);
+}
+@media (min-width: 48rem) {
+  .app-hero { grid-template-columns: 1fr minmax(14rem, 19rem); }
+}
+.app-icon {
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 22.5%;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.shot { margin: 0; max-width: 19rem; }
+.shot img {
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  border: 1px solid var(--line);
+  box-shadow: 0 1.5rem 3rem -1.5rem color-mix(in srgb, var(--ink) 35%, transparent);
+}
+
+.feature {
+  display: grid;
+  gap: 1.5rem clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  margin-bottom: clamp(3rem, 7vw, 4.5rem);
+}
+.feature:last-child { margin-bottom: 0; }
+.feature .shot { max-width: 16rem; }
+@media (min-width: 48rem) {
+  .feature { grid-template-columns: minmax(12rem, 16rem) 1fr; }
+  .feature:nth-child(even of .feature) { grid-template-columns: 1fr minmax(12rem, 16rem); }
+  .feature:nth-child(even of .feature) .shot { order: 2; }
+}
+.feature h3 { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.75rem); }
+
+.store-button { display: inline-flex; align-items: center; gap: 0.5rem; }
+.store-button svg { width: 1.1em; height: 1.1em; }
