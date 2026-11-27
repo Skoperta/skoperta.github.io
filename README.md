@@ -8,8 +8,10 @@ Company website for Skoperta Ltd, served by GitHub Pages from the root of the `m
 |---|---|
 | `index.html` | Landing page: what we do, how we work, contact |
 | `privacy/index.html` | Privacy notice (website, email, products) |
-| `apps/index.html` | List of our apps, linking each app's support and privacy pages |
+| `apps/index.html` | List of our apps, linking each app's page, support and privacy pages |
+| `apps/<slug>/index.html` | App page: what the app does, screenshots, App Store link (images in `apps/<slug>/images/`) |
 | `apps/<slug>/support/index.html`, `apps/<slug>/privacy/index.html` | Support page and privacy policy for each app |
+| `templates/app-page.html` | Starting point for a new app page (noindex, disallowed in `robots.txt`) |
 | `404.html` | Not-found page (GitHub Pages serves it automatically) |
 | `assets/css/style.css` | Design tokens (colours, type, spacing) and layout, shared by every page |
 | `assets/favicon.svg`, `assets/favicon.png`, `assets/apple-touch-icon.png` | Site icons |
@@ -28,7 +30,7 @@ Company website for Skoperta Ltd, served by GitHub Pages from the root of the `m
 
 ## Adding an app
 
-Create `apps/<slug>/support/index.html` and `apps/<slug>/privacy/index.html`, copying the header, footer and breadcrumb from an existing app (such as `apps/binosha-keyboard/`). Add an `<article>` for it to `apps/index.html`, and add both URLs to `sitemap.xml`. App store forms then point at stable URLs: `https://skoperta.com/apps/<slug>/privacy/` for the privacy policy and `https://skoperta.com/apps/<slug>/support/` for support.
+Create `apps/<slug>/support/index.html` and `apps/<slug>/privacy/index.html`, copying the header, footer and breadcrumb from an existing app (such as `apps/binosha-keyboard/`). For an app page, copy `templates/app-page.html` to `apps/<slug>/index.html` and follow the comment at its top (`apps/mizzle/index.html` is a finished example); screenshots go in `apps/<slug>/images/` as WebP about 600 px wide. Add an `<article>` for the app to `apps/index.html`, and add every new URL to `sitemap.xml`. Search for `APP STORE:` in an app page to find the download links to fill in once the app is live. App store forms then point at stable URLs: `https://skoperta.com/apps/<slug>/privacy/` for the privacy policy and `https://skoperta.com/apps/<slug>/support/` for support.
 
 ## Domain
 
