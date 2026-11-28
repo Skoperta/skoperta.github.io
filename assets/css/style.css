@@ -336,3 +336,6 @@ address { font-style: normal; }
 
 .store-button { display: inline-flex; align-items: center; gap: 0.5rem; }
 .store-button svg { width: 1.1em; height: 1.1em; }
+
+/* App page without a hero screenshot: let the text use the full width */
+.app-hero > :only-child { grid-column: 1 / -1; max-width: 46rem; }
