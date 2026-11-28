@@ -299,6 +299,17 @@ address { font-style: normal; }
   box-shadow: 0 0 0 1px var(--line);
 }
 
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.app-title .app-icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+}
+
 .shot { margin: 0; max-width: 19rem; }
 .shot img {
   width: 100%;
